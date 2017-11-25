@@ -5,7 +5,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    sassOptions: {
+      extension: "sass",
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -20,6 +22,5 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
-
   return app.toTree();
 };
